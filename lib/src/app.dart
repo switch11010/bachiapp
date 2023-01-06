@@ -5,6 +5,8 @@ import 'screens/mapview.dart';
 import 'screens/home.dart';
 import 'screens/chatroom.dart';
 
+import 'login_parts/login.dart';
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -15,13 +17,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyStatefulWidget(),
+      home: Login()
+      // const MyStatefulWidget(),
     );
   }
 }
 
 class MyStatefulWidget extends StatefulWidget {
-  const MyStatefulWidget({Key? key}) : super(key: key);
+  const MyStatefulWidget({Key? key, required String user_id}) : super(key: key);
 
   @override
   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
